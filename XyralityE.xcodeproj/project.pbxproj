@@ -17,6 +17,11 @@
 		B148B8DC2032F2F5004E0710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B148B8DA2032F2F5004E0710 /* LaunchScreen.storyboard */; };
 		B148B8E72032F2F5004E0710 /* XyralityETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B8E62032F2F5004E0710 /* XyralityETests.swift */; };
 		B148B8F22032F2F5004E0710 /* XyralityEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B8F12032F2F5004E0710 /* XyralityEUITests.swift */; };
+		B148B9002032F99A004E0710 /* AvailableWorldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B8FF2032F99A004E0710 /* AvailableWorldsController.swift */; };
+		B148B90220330055004E0710 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B90120330055004E0710 /* Server.swift */; };
+		B148B9042033009A004E0710 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B9032033009A004E0710 /* JSONParser.swift */; };
+		B148B90620331514004E0710 /* PlistToJSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B90520331514004E0710 /* PlistToJSONConverter.swift */; };
+		B148B90820331AB2004E0710 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148B90720331AB2004E0710 /* DeviceData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		B148B8ED2032F2F5004E0710 /* XyralityEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XyralityEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148B8F12032F2F5004E0710 /* XyralityEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XyralityEUITests.swift; sourceTree = "<group>"; };
 		B148B8F32032F2F5004E0710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B148B8FF2032F99A004E0710 /* AvailableWorldsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableWorldsController.swift; sourceTree = "<group>"; };
+		B148B90120330055004E0710 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		B148B9032033009A004E0710 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		B148B90520331514004E0710 /* PlistToJSONConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistToJSONConverter.swift; sourceTree = "<group>"; };
+		B148B90720331AB2004E0710 /* DeviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
 		CF94AC055460216EA64B723F /* Pods-XyralityE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XyralityE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XyralityE/Pods-XyralityE.debug.xcconfig"; sourceTree = "<group>"; };
 		DAE32ECE5F3C7BF862B22EEB /* Pods_XyralityETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XyralityETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,7 +149,12 @@
 			children = (
 				B148B8D12032F2F5004E0710 /* AppDelegate.swift */,
 				B148B8D32032F2F5004E0710 /* ViewController.swift */,
+				B148B90720331AB2004E0710 /* DeviceData.swift */,
 				B148B8D52032F2F5004E0710 /* Main.storyboard */,
+				B148B90120330055004E0710 /* Server.swift */,
+				B148B90520331514004E0710 /* PlistToJSONConverter.swift */,
+				B148B9032033009A004E0710 /* JSONParser.swift */,
+				B148B8FF2032F99A004E0710 /* AvailableWorldsController.swift */,
 				B148B8D82032F2F5004E0710 /* Assets.xcassets */,
 				B148B8DA2032F2F5004E0710 /* LaunchScreen.storyboard */,
 				B148B8DD2032F2F5004E0710 /* Info.plist */,
@@ -461,7 +476,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B148B8D42032F2F5004E0710 /* ViewController.swift in Sources */,
+				B148B9042033009A004E0710 /* JSONParser.swift in Sources */,
+				B148B9002032F99A004E0710 /* AvailableWorldsController.swift in Sources */,
+				B148B90220330055004E0710 /* Server.swift in Sources */,
+				B148B90620331514004E0710 /* PlistToJSONConverter.swift in Sources */,
 				B148B8D22032F2F5004E0710 /* AppDelegate.swift in Sources */,
+				B148B90820331AB2004E0710 /* DeviceData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
