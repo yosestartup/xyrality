@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     //MARK: UI init
     @IBOutlet var loginField: UITextField!
     @IBOutlet var passwordField: UITextField!
+    
+    ///MARK: Device data initialization
+    
     @IBAction func logIn(_ sender: Any) {
         
     //MARK: Get device data
@@ -35,7 +38,7 @@ class ViewController: UIViewController {
    let deviceInfoString = "\(model) - \(systemName) - \(systemVersion)"
         
     //MARK: Server request
-     let server = Server()
+     var server = Server()
      let parameters:Parameters = [
 //            "login": "ios.test@xyrality.com",
 //            "password": "password",
@@ -46,8 +49,18 @@ class ViewController: UIViewController {
             "deviceType": deviceInfoString,
             "deviceId": uuid
             ]
-     
-      server.setRequest(params: parameters)
+        var jsonLocal:JSON?
+        server.setRequest(params: parameters) { (json) in
+            jsonLocal = json
+             print(jsonLocal)
+        }
+       
+        
+    //Get file
+    //  var json = server.jsonResult
+   //   print(json)
+   //   let parser = JSONParser()
+   //   parser.extract(json: json)
     
     }
     

@@ -11,10 +11,10 @@ import Alamofire
 import SwiftyJSON
 
 class Server: NSObject {
-    
-    func setRequest(params:Parameters) -> JSON
+  
+    func setRequest(params:Parameters, completion: @escaping (JSON) -> ())
     {
-        var jsonResult: JSON = JSON.null;
+        
         
         let urld = URL(string: "http://backend1.lordsandknights.com/XYRALITY/WebObjects/BKLoginServer.woa/wa/worlds")
         
@@ -22,16 +22,17 @@ class Server: NSObject {
             switch response.result {
             case .success(let resp):
             let converter = PlistToJSONConverter()
-            jsonResult = converter.convert(response: resp)
-            print (jsonResult)
+            var jsonResult = converter.convert(response: resp)
+            completion(jsonResult)
+            
             case .failure:
                 print("error")
                 
             }
         }
         
-        return jsonResult
-        
     }
     
+
+  
 }
