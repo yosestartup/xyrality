@@ -148,15 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				B148B8D12032F2F5004E0710 /* AppDelegate.swift */,
-				B148B8D32032F2F5004E0710 /* ViewController.swift */,
-				B148B90720331AB2004E0710 /* DeviceData.swift */,
-				B148B8D52032F2F5004E0710 /* Main.storyboard */,
-				B148B90120330055004E0710 /* Server.swift */,
-				B148B90520331514004E0710 /* PlistToJSONConverter.swift */,
-				B148B9032033009A004E0710 /* JSONParser.swift */,
-				B148B8FF2032F99A004E0710 /* AvailableWorldsController.swift */,
+				B17B557D20345E9800B7C429 /* Model */,
+				B17B557C20345E8B00B7C429 /* View */,
+				B17B557B20345E7600B7C429 /* Controller */,
 				B148B8D82032F2F5004E0710 /* Assets.xcassets */,
-				B148B8DA2032F2F5004E0710 /* LaunchScreen.storyboard */,
 				B148B8DD2032F2F5004E0710 /* Info.plist */,
 			);
 			path = XyralityE;
@@ -178,6 +173,35 @@
 				B148B8F32032F2F5004E0710 /* Info.plist */,
 			);
 			path = XyralityEUITests;
+			sourceTree = "<group>";
+		};
+		B17B557B20345E7600B7C429 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B148B8D32032F2F5004E0710 /* ViewController.swift */,
+				B148B8FF2032F99A004E0710 /* AvailableWorldsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B17B557C20345E8B00B7C429 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B148B8DA2032F2F5004E0710 /* LaunchScreen.storyboard */,
+				B148B8D52032F2F5004E0710 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B17B557D20345E9800B7C429 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B148B90720331AB2004E0710 /* DeviceData.swift */,
+				B148B90120330055004E0710 /* Server.swift */,
+				B148B90520331514004E0710 /* PlistToJSONConverter.swift */,
+				B148B9032033009A004E0710 /* JSONParser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

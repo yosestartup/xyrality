@@ -8,8 +8,13 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--LogIn-->
+        <!--Sign In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XyralityE" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,34 +22,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Log" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0U-zM-ibb">
-                                <rect key="frame" x="102" y="259" width="171" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Login" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0U-zM-ibb">
+                                <rect key="frame" x="62" y="164" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="xWU-E9-2qX"/>
+                                    <constraint firstAttribute="height" constant="50" id="zye-HF-HQU"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pas" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-Ol-qHU">
-                                <rect key="frame" x="102" y="304" width="171" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TCa-Ol-qHU">
+                                <rect key="frame" x="62" y="239" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5cT-5G-v62"/>
+                                    <constraint firstAttribute="width" constant="250" id="Yoi-Jw-5zM"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-Zf-m35">
-                                <rect key="frame" x="164" y="409" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="LogIn"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gX7-Zf-m35">
+                                <rect key="frame" x="149" y="319" width="77" height="55"/>
+                                <color key="backgroundColor" red="0.98354031479343207" green="0.99630912074026401" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="LMX-kU-muE"/>
+                                    <constraint firstAttribute="height" constant="55" id="hzg-L7-HqD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="logIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPZ-y4-aqG"/>
                                     <segue destination="Vh4-QQ-uSS" kind="show" identifier="LogIn" id="tDk-Zs-wWp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.058165311813354492" green="0.52179872989654541" blue="0.97453993558883667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gX7-Zf-m35" firstAttribute="top" secondItem="TCa-Ol-qHU" secondAttribute="bottom" constant="30" id="25H-K7-9X7"/>
+                            <constraint firstItem="TCa-Ol-qHU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HRy-ct-mzW"/>
+                            <constraint firstItem="gX7-Zf-m35" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HhX-gJ-X2p"/>
+                            <constraint firstItem="TCa-Ol-qHU" firstAttribute="top" secondItem="J0U-zM-ibb" secondAttribute="bottom" constant="25" id="YRz-Yb-iSU"/>
+                            <constraint firstItem="J0U-zM-ibb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dpP-bF-3dh"/>
+                            <constraint firstItem="J0U-zM-ibb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="hvP-O8-hqy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LogIn" id="alr-sh-5SV"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="alr-sh-5SV"/>
                     <connections>
                         <outlet property="loginField" destination="J0U-zM-ibb" id="6f2-kV-AMN"/>
                         <outlet property="passwordField" destination="TCa-Ol-qHU" id="8at-fF-7lh"/>
