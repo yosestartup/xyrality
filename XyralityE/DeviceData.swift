@@ -14,7 +14,14 @@ class DeviceData: NSObject {
         let systemVersion = UIDevice.current.systemVersion
         let systemName = UIDevice.current.systemName
         let uuid = NSUUID().uuidString.lowercased()
-
+        var deviceInfoString:String?
+    
+    
+ override init() {
+    
+         deviceInfoString = "\(model) - \(systemName) - \(systemVersion)"
+    
+    }
 }
 
 extension UIDevice {

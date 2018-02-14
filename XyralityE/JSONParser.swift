@@ -11,24 +11,24 @@ import SwiftyJSON
 
 class JSONParser: NSObject {
 
-
-
-    func extract(json:JSON)  -> [Array<Any>]{
+    func extract(json:JSON) -> [String]  {
     
-        var arrayOfWorldsDict = [Array<Any>]()
-    
+        var worldNameArray = [String]()
+        var worldsArray = [Dictionary<String,Any>]()
         
-        if let worldsIsAvailable = json["allAvailableWorlds"].arrayObject
-        {
-           
-            arrayOfWorldsDict = worldsIsAvailable as! [Array<Any>]
+        if let worldsIsAvailable = json["allAvailableWorlds"].arrayObject {
+            
             for element in worldsIsAvailable {
-                print(element)
+                worldsArray.append(element as! [String : Any])
+                
+            }
+            
+            for element in worldsArray  {
+                worldNameArray.append(element["name"] as! String)
+                
             }
         }
+    return worldNameArray
         
-        return arrayOfWorldsDict
-    
 }
-
 }

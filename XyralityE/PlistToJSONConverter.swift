@@ -13,16 +13,20 @@ class PlistToJSONConverter: NSObject {
     
     func convert (response: Data) -> JSON
     {
-        var json:JSON = nil;
+        
+        var json = JSON()
         do {
+            
             let data = try Data(response)
             let dict = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as! [String:Any]
             let jsonData = try JSONSerialization.data(withJSONObject: dict , options: .prettyPrinted)
             json = JSON(jsonData)
             
         } catch {
+            
             print(error)
         }
+        
       return json
     }
 }

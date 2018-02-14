@@ -13,57 +13,39 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+ 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
     
-    //MARK: UI init
+    //MARK: Initializers
+    var parameters:Parameters?
     @IBOutlet var loginField: UITextField!
     @IBOutlet var passwordField: UITextField!
-    
-    ///MARK: Device data initialization
-    
     @IBAction func logIn(_ sender: Any) {
-        
+  
     //MARK: Get device data
-   let deviceData = DeviceData()
-   let model = deviceData.model
-   let systemVersion = deviceData.systemVersion
-   let systemName = deviceData.systemName
-   let uuid = deviceData.uuid
-   let deviceInfoString = "\(model) - \(systemName) - \(systemVersion)"
-        
-    //MARK: Server request
-     var server = Server()
-     let parameters:Parameters = [
-//            "login": "ios.test@xyrality.com",
-//            "password": "password",
-//            "deviceType": "iPhone9,4",
-//            "deviceId": "0000000000",
+    let deviceData = DeviceData()
+    let uuid = deviceData.uuid
+    let deviceInfoString = deviceData.deviceInfoString
+    
+    //MARK: Parameters generating (for request)
+     parameters = [
             "login": loginField.text,
             "password": passwordField.text,
             "deviceType": deviceInfoString,
             "deviceId": uuid
             ]
-        var jsonLocal:JSON?
-        server.setRequest(params: parameters) { (json) in
-            jsonLocal = json
-             print(jsonLocal)
-        }
-       
         
-    //Get file
-    //  var json = server.jsonResult
-   //   print(json)
-   //   let parser = JSONParser()
-   //   parser.extract(json: json)
-    
     }
     
-    //
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! AvailableWorldsController
+        destinationVC.parameters = parameters
+    }
+    
 }
 
